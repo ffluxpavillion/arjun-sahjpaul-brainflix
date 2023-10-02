@@ -1,0 +1,120 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.info {
+	font-size: 13px;
+	line-height: 18px;
+	font-family: 'Avenir';
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 14px;
+		line-height: 22px;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin: 0;
+		padding-left: 2rem;
+	}
+
+	&__header {
+		font-size: 24px;
+		line-height: 32px;
+		padding-top: 3rem;
+		align-self: flex-start;
+
+		@media screen and (min-width: $desktop) {
+			font-size: 36px;
+			line-height: 44px;
+		}
+	}
+
+	&-div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-bottom: 1px solid $mercury;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		@media screen and (min-width: $tablet) {
+			justify-content: space-between;
+			flex-direction: row;
+			padding-right: 2rem;
+		}
+	}
+
+	&-user {
+		display: flex;
+		justify-content: flex-start;
+		margin-right: 1rem;
+
+		&__ID {
+			margin-right: 1rem;
+			display: flex;
+			align-items: flex-end;
+			font-weight: 600;
+		}
+
+		&__postDate {
+			color: $silver;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+
+	&-social {
+		display: flex;
+		justify-content: flex-start;
+		padding-top: 1rem;
+
+		@media screen and (min-width: $tablet) {
+			padding-top: 0px;
+		}
+
+		&__viewsIcon,
+		&__likeIcon {
+			position: relative;
+			top: 3px;
+			padding-right: 8px;
+		}
+
+		&__likes {
+			padding-left: 2rem;
+		}
+	}
+
+	&__commentCount {
+		font-size: 14px;
+		line-height: 22px;
+		margin-top: 1.5rem;
+		font-weight: 600;
+
+		@media screen and (min-width: $mobile) {
+			margin-bottom: 1rem;
+		}
+
+		@media screen and (min-width: $tablet) {
+			padding-right: 3rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__text {
+		padding-top: 0.9rem;
+		text-align: -webkit-auto;
+
+		@media screen and (min-width: $tablet) {
+			width: 94%;
+		}
+
+		@media screen and (min-width: $desktop) {
+			width: 97%;
+		}
+	}
+}

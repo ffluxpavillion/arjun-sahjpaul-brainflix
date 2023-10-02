@@ -1,0 +1,219 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.header {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	@media screen and (min-width: $mobile) {
+		padding: 0.5rem;
+	}
+
+	@media screen and (min-width: $tablet) {
+		flex-direction: row;
+		justify-content: space-around;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding-left: 10rem;
+		padding-right: 10rem;
+		justify-content: space-between;
+	}
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+
+		@media screen and (min-width: $tablet) {
+			width: 60%;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+		}
+
+		@media screen and (min-width: $desktop) {
+			width: 40%;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+		}
+
+		&-bottom {
+			display: flex;
+			width: 100%;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+
+			@media screen and (min-width: $tablet) {
+				width: 100%;
+				justify-content: flex-end;
+				margin-top: 0.7rem;
+				padding-left: 0.5rem;
+			}
+
+			@media screen and (min-width: $desktop) {
+				width: 100%;
+				justify-content: flex-end;
+				// padding-top: 0.5rem;
+			}
+		}
+	}
+	&__wrapper {
+		width: 83%;
+		position: relative;
+
+		@media screen and (min-width: $tablet) {
+			width: 100%;
+		}
+
+		@media screen and (min-width: $desktop) {
+		}
+	}
+
+	&__search {
+		width: 100%;
+		min-height: 3rem;
+		margin-top: 0.7rem;
+		margin-bottom: 0.5rem;
+		background-color: $alabaster;
+		border-radius: 4px;
+		border: 1px solid $mercury;
+		padding-left: 3rem;
+
+		@media screen and (min-width: $tablet) {
+			width: 100%;
+		}
+
+		&::placeholder {
+			color: $black;
+			position: relative;
+			top: 1px;
+		}
+
+		&:focus {
+			outline: none;
+			border: 2px solid $blue;
+		}
+	}
+
+	&__searchIcon {
+		position: absolute;
+		left: 1.5rem;
+		top: 1.5rem;
+
+		@media screen and (min-width: $tablet) {
+			// top: 0.8rem;
+		}
+	}
+
+	&__uploadIcon {
+		@media screen and (min-width: $mobile) and (max-width: 767px) {
+			// padding-left: 0.5rem;
+			// padding-right: 9rem;
+		}
+
+		@media screen and (min-width: $tablet) and (max-width: 1279px) {
+			padding-right: 2rem;
+		}
+
+		@media screen and (min-width: $desktop) {
+			padding-right: 1rem;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		min-height: 3rem;
+		background-position: 25% 50%;
+		background-color: $blue;
+		border-radius: 4px;
+		border-color: $blue;
+		color: white;
+		font-weight: 600;
+		display: flex;
+
+		@media screen and (min-width: $mobile) and (max-width: 767px) {
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media screen and (min-width: $tablet) and (max-width: 1279px) {
+			margin-left: 0.5rem;
+			padding-right: 0.5rem;
+			width: 100%;
+			height: 1rem;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-left: 0.5rem;
+			padding-right: 0.5rem;
+			width: 100%;
+			height: 1rem;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__avatar {
+		border-radius: 50%;
+		height: 48px;
+		width: 48px;
+		margin-left: 1rem;
+		background-image: url('../../assets/Images/Mohan-muruge.jpg');
+		background-size: cover;
+
+		@media screen and (min-width: $mobile) {
+			margin: 0.6rem 0 0.9rem 0;
+			padding: 0 0 0.1rem 0;
+		}
+
+		@media screen and (min-width: $tablet) {
+			margin-left: 1rem;
+			min-height: 48px;
+			min-width: 48px;
+			margin-top: 0.1rem;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-left: 1rem;
+			min-height: 48px;
+			min-width: 48px;
+		}
+	}
+}
+
+.small-screen {
+	@media screen and (min-width: $mobile) {
+		display: flex;
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: none;
+	}
+
+	@media screen and (min-width: $desktop) {
+		display: none;
+	}
+}
+
+.large-screen {
+	@media screen and (min-width: $mobile) {
+		display: none;
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+	}
+
+	@media screen and (min-width: $desktop) {
+		display: flex;
+	}
+}
