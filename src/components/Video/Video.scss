@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.video {
+	&-wrapper {
+		display: flex;
+		height: 250px;
+		background-color: black;
+
+		@media screen and (min-width: $tablet) {
+			height: 400px;
+		}
+
+		@media screen and (min-width: $desktop) {
+			height: 800px;
+		}
+	}
+	&__img {
+		min-width: 100%;
+		height: auto;
+
+		@media screen and (min-width: $mobile) {
+			object-fit: cover;
+		}
+
+		@media screen and (min-width: $tablet) {
+			object-fit: contain;
+		}
+
+		@media screen and (min-width: $desktop) {
+			object-fit: contain;
+		}
+	}
+}

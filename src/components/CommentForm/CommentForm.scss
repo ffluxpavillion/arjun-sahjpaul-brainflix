@@ -1,0 +1,135 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.comments {
+	&-form {
+		display: flex;
+		flex-direction: column;
+		margin-left: 5rem;
+		margin-right: 1rem;
+		margin-bottom: 1.5rem;
+		position: relative;
+
+		@media screen and (min-width: $tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+			margin-left: 5.5rem;
+			margin-right: 4rem;
+			margin-bottom: 1.5rem;
+			align-items: center;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-left: 14rem;
+		}
+	}
+
+	&__avatar {
+		border-radius: 50%;
+		min-height: 48px;
+		min-width: 48px;
+		max-height: 100px;
+		max-width: 100px;
+		position: absolute;
+		background-image: url('../../assets/Images/Mohan-muruge.jpg');
+		background-size: cover;
+
+		@media screen and (min-width: $mobile) and (max-width: 767px) {
+			left: -4rem;
+			margin-top: 2rem;
+		}
+
+		@media screen and (min-width: $tablet) {
+			left: -4.5rem;
+			margin-top: 0rem;
+		}
+	}
+	&__input {
+		resize: none;
+		height: 96px;
+		border: 2px solid $mercury;
+		border-radius: 5px;
+		background-color: $alabaster;
+		overflow: hidden;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 0.75rem;
+			padding-left: 0.8rem;
+		}
+
+		@media screen and (min-width: $tablet) {
+			height: 100%;
+			width: 80%;
+			margin-bottom: 0;
+			margin-right: 1rem;
+			padding-left: 0.8rem;
+		}
+
+		&::placeholder {
+			color: $black;
+			position: relative;
+			top: 0.5rem;
+		}
+
+		&:focus {
+			outline: none;
+			border: 2px solid $blue;
+		}
+	}
+
+	&__label {
+		font-size: 12px;
+		line-height: 20px;
+		color: $mercury;
+		font-weight: 600;
+
+		@media screen and (min-width: $tablet) {
+			position: absolute;
+			bottom: 3.5rem;
+		}
+	}
+
+	&__button {
+		height: 3rem;
+		background-color: $blue;
+		border-color: $blue;
+		color: white;
+		border-radius: 4px;
+
+		@media screen and (min-width: $mobile) {
+			height: 100%;
+			background-color: $blue;
+			border-color: $blue;
+			margin-top: 1rem;
+			margin-bottom: 0;
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+			font-weight: 600;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media screen and (min-width: $tablet) {
+			height: 100%;
+			width: 25%;
+			background-color: $blue;
+			border-color: $blue;
+			margin-bottom: 1rem;
+			padding-top: 0.5rem;
+			padding-left: 4.5rem;
+			padding-right: 6.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__add-comment {
+		padding-right: 1rem;
+
+		@media screen and (min-width: $mobile) and (max-width: 767px) {
+			padding-right: 1rem;
+		}
+	}
+}
