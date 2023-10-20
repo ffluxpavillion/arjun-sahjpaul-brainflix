@@ -1,7 +1,6 @@
-import React from 'react';
 import './VideoInfo.scss';
-import Viewicon from '../../assets/Icons/views.svg';
-import Likeicon from '../../assets/Icons/likes.svg';
+import ViewIcon from '../../assets/Icons/views.svg';
+import LikeIcon from '../../assets/Icons/likes.svg';
 
 function VideoInfo(props) {
   const { content } = props;
@@ -17,10 +16,10 @@ function VideoInfo(props) {
         </div>
         <div className="info-social">
           <p className="info-social__views">
-            <img className="info-social__viewsIcon" src={Viewicon} alt="View count icon" />{content.views}
+            <img className="info-social__viewsIcon" src={ViewIcon} alt="View count icon" />{content.views}
           </p>
           <p className="info-social__likes">
-            <img className="info-social__likeIcon" src={Likeicon} alt="Like count icon" />{content.likes}
+            <img className="info-social__likeIcon" src={LikeIcon} alt="Like count icon" />{content.likes}
           </p>
         </div>
       </div>

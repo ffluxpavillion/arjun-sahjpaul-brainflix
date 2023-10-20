@@ -1,3 +1,6 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage/MainPage';
+import UploadPage from './pages/UploadPage/UploadPage';
 import './App.scss';
 import React, { Component } from 'react';
 import { useState } from 'react';
@@ -34,24 +37,42 @@ class App extends Component {
 		const { mainVideo, sideVideos } = this.state;
 
 		return (
-			<div className="App">
-				<Header />
-				<Video content={mainVideo} />
-				<div className="split">
-					<div className="split-left">
-						<VideoInfo content={mainVideo} />
-						<CommentForm />
-						<Comments comments={mainVideo.comments} />
-					</div>
-					<VideoList
-						clickHandler={this.clickHandler}
-						selectedId={mainVideo.id}
-						list={sideVideos}
-					/>
+			<BrowserRouter>
+				<div className="App">
+					<Header />
+					<Routes>
+						<Route exact path="/" element={<MainPage />} />
+						<Route path="/videos/:videoId" element={<MainPage />} />
+						<Route path="/upload" element={<UploadPage />} />
+					</Routes>
 				</div>
-			</div>
+			</BrowserRouter>
 		);
 	}
 }
+
+// 	render() {
+// 		const { mainVideo, sideVideos } = this.state;
+
+// 		return (
+// 			<div className="App">
+// 				<Header />
+// 				<Video content={mainVideo} />
+// 				<div className="split">
+// 					<div className="split-left">
+// 						<VideoInfo content={mainVideo} />
+// 						<CommentForm />
+// 						<Comments comments={mainVideo.comments} />
+// 					</div>
+// 					<VideoList
+// 						clickHandler={this.clickHandler}
+// 						selectedId={mainVideo.id}
+// 						list={sideVideos}
+// 					/>
+// 				</div>
+// 			</div>
+// 		);
+// 	}
+// }
 
 export default App;

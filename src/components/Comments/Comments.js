@@ -1,4 +1,3 @@
-import React from 'react';
 import './Comments.scss';
 
 function Comment({ comment }) {

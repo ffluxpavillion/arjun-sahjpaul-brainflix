@@ -13,11 +13,13 @@ function CommentForm(props) {
 				id="text"
 				placeholder="Add a new comment"
 			></textarea>
-			<button className="comments__button">
+			<button
+				onClick={(event) => event.preventDefault()} 
+				className="comments__button">
 				<img
 					className="comments__add-comment"
 					src={Comment}
-					alt="Search Icon"
+					alt="Add Comment"
 				></img>
 				COMMENT
 			</button>

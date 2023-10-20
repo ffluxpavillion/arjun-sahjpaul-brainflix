@@ -1,4 +1,3 @@
-import React from 'react';
 import './VideoList.scss';
 
 function VideoListItem({ video, onClick }) {
