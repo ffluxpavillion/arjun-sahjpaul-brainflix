@@ -1,32 +1,30 @@
 import './VideoList.scss';
+import SideVideo from "../SideVideo/SideVideo"
 
-function VideoListItem({ video, onClick }) {
-  return (
-    <div className="videoList-panel" onClick={() => onClick(video.id)}>
-      <div className="videoList-wrapper">
-        <img
-          className="videoList__thumbnail"
-          src={video.image}
-          alt="Video Thumbnail Preview"
-        />
-      </div>
-      <div className="videoList-panel-card">
-        <h4 className="videoList-panel-card__title">{video.title}</h4>
-        <p className="videoList-panel-card__channel">{video.channel}</p>
-      </div>
-    </div>
-  );
-}
 
-function VideoList(props) {
+
+function VideoList({ sideVideos }) {
+  if (!sideVideos) {
+      return <div>Loading...</div>;
+  }
+
   return (
     <div className="videoList">
-      <h5 className="videoList__header">NEXT VIDEO</h5>
-      {props.list.map((video) => (
-        <VideoListItem key={video.id} video={video} onClick={props.clickHandler} />
-      ))}
-    </div>
+    <h5 className="videoList__header">NEXT VIDEO</h5>
+    {sideVideos.list.map((video) => (
+      <SideVideo 
+      key={video.id} 
+      id={video.id} 
+      channel={video.channel} 
+      title={video.title} 
+      image={video.image} 
+      video={video} 
+       />
+    ))}
+  </div>
   );
 }
+
+
 
 export default VideoList;

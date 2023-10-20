@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-function UploadPage() {
+export default function UploadPage() {
 	const navigate = useNavigate();
 
 	const handleFormSubmit = (e) => {
@@ -10,46 +10,51 @@ function UploadPage() {
 	};
 
 	return (
-		<div>
-			<div className="upload">
-				<h1 className="upload__title">Upload Video</h1>
-				<div className="upload__big-container">
-					<div className="upload__video-container">
-						<h2 className="upload__subtitle">VIDEO THUMBNAIL</h2>
-						<div className="upload__video"></div>
-					</div>
-					<form className="upload__input-container">
-						<h5 className="upload__input-container--text">TITLE YOUR VIDEO</h5>
-						<textarea
-							className="upload__text-container upload__text-container--one"
-							name="name"
-							rows="10"
-							cols="50"
-							placeholder="Add a title to your video"
-						></textarea>
-						<h5 className="upload__input-container--text">
-							ADD A VIDEO DESCRIPTION
-						</h5>
-						<textarea
-							className="upload__text-container upload__text-container--two"
-							name="comment"
-							rows="10"
-							cols="50"
-							placeholder="Add a description of your video"
-						></textarea>
-					</form>
-				</div>
-				<div className="upload__button-container">
-					<button className="upload__button-container--publish">PUBLISH</button>
-					<button className="upload__button-container--cancel">CANCEL</button>
-				</div>
-			</div>
-			<form onSubmit={handleFormSubmit}>
-				{/* Add your input fields */}
-				<button type="submit">Upload</button>
-			</form>
-		</div>
-	);
-}
+		<section className="upload-section">
+  <header className="upload-header">
+    <h1>Upload Video</h1>
+  </header>
 
-export default UploadPage;
+  <div className="upload-content">
+    <div className="upload-thumbnail">
+      <h2>VIDEO THUMBNAIL</h2>
+      <div className="upload-video"></div>
+    </div>
+
+    <form className="upload-form">
+      <label className="upload-label" htmlFor="video-title">
+        TITLE YOUR VIDEO
+      </label>
+      <textarea
+        id="video-title"
+        className="upload-textarea title-textarea"
+        name="name"
+        rows="10"
+        placeholder="Add a title to your video"
+      ></textarea>
+
+      <label className="upload-label" htmlFor="video-description">
+        ADD A VIDEO DESCRIPTION
+      </label>
+      <textarea
+        id="video-description"
+        className="upload-textarea description-textarea"
+        name="comment"
+        rows="10"
+        placeholder="Add a description of your video"
+      ></textarea>
+    </form>
+  </div>
+
+  <div className="upload-actions">
+    <button type="submit" className="upload-btn publish-btn">PUBLISH</button>
+    <button type="button" className="upload-btn cancel-btn">CANCEL</button>
+  </div>
+
+  <form className="extra-form" onSubmit={handleFormSubmit}>
+    {/* NEED 2 ADD INPUT FIELDS HERE */}
+    <button type="submit" className="upload-submit-btn">Upload</button>
+  </form>
+</section>
+  )
+  }
