@@ -1,54 +1,72 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+import { useParams, useNavigate,} from 'react-router-dom'
 import axios from 'axios';
+import HeroVideo from '../../components/HeroVideo/HeroVideo'
+import VideoInfo from '../../components/VideoInfo/VideoInfo'
+import VideoList from '../../components/VideoList/VideoList'
+import CommentForm from '../../components/CommentForm/CommentForm'
+import Comments from '../../components/Comments/Comments'
 
-import Header from '../../components/Header/Header';
-import HeroVideo from '../../components/HeroVideo/HeroVideo';
-import VideoInfo from '../../components/VideoInfo/VideoInfo';
-import VideoList from '../../components/VideoList/VideoList';
-import CommentForm from '../../components/CommentForm/CommentForm';
-import Comments from '../../components/Comments/Comments';
 
-const apiKeyParam = 'api_key=7c8b9671-1c6e-455d-be11-f7ad883ff208';
-const apiUrl = 'https://project-2-api.herokuapp.com';
+
 
 export default function MainPage() {
 
-  let { id } = useParams();
-  const [mainVideo, setMainVideo] = useState();
+  const [mainVideo, setMainVideo] = useState([null]);
   const [sideVideos, setSideVideos] = useState([]);
+  const { videoId } = useParams();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
-    fetchVideos();
-  }, [id]);
-
-  const fetchVideos = () => {
-    axios.get(`${apiUrl}/videos?${apiKeyParam}`)
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+      )
       .then((response) => {
-        const allVideosData = response.data;
-
-        if (id) {
-          const mainVideoData = allVideosData.find(video => video.id === id);
-          setMainVideo(mainVideoData);
-        } else {
-          const defaultVideoId = allVideosData[0].id;
-          const defaultMainVideo = allVideosData.find(video => video.id === defaultVideoId);
-          setMainVideo(defaultMainVideo);
-        }
-
-        const sortedSideVideos = allVideosData.filter((video) => video.id !== id);
-        setSideVideos(sortedSideVideos);
+        setSideVideos(response.data);
       });
-  };
+  }, []);
+  
+  let filteredVideoList = sideVideos.filter(
+    (video) => video.id !== mainVideo.id
+  )
+
+  useEffect(() => {
+    axios
+      .get(
+        videoId
+          ? `https://project-2-api.herokuapp.com/videos/${videoId}/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec`
+          : "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+      )
+      .then((response) => {
+        setMainVideo(response.data);
+        setLoading(false);
+
+      })
+      .catch((err) => {
+        console.error(err);
+        navigate("/video/notfound/error");
+      });
+  }, [videoId]);
+  
 
   return (
-    <>
-      <Header />
+    <div className="App">
       {mainVideo && <HeroVideo video={mainVideo} />}
-      <VideoInfo />
-      <CommentForm />
-      <Comments />
-      <VideoList sideVideos={sideVideos} />
-    </>
-  );
+      <div className="split">
+					<div className="split-left">
+            <VideoInfo mainVideo={mainVideo} />
+            <CommentForm />
+            {mainVideo && mainVideo.comments && <Comments comments={mainVideo.comments} />}
+          </div>
+          <VideoList
+              sideVideos={filteredVideoList}
+              setMainVideo={setMainVideo}
+            />
+      </div>
+    </div>
+  )
 }

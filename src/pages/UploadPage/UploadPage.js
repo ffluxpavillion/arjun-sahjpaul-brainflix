@@ -1,60 +1,97 @@
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
 
-export default function UploadPage() {
-	const navigate = useNavigate();
+import './UploadPage.scss';
+import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
+import uploadIcon from '../../assets/Icons/publish.svg';
 
-	const handleFormSubmit = (e) => {
-		e.preventDefault();
-		alert('Video uploaded successfully! Redirecting to the homepage...');
-		navigate.push('/');
-	};
 
-	return (
-		<section className="upload-section">
-  <header className="upload-header">
-    <h1>Upload Video</h1>
-  </header>
 
-  <div className="upload-content">
-    <div className="upload-thumbnail">
-      <h2>VIDEO THUMBNAIL</h2>
-      <div className="upload-video"></div>
-    </div>
+function UploadPage() {
+  const [videosList, setVideosList] = useState([]);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+  const navigate = useNavigate();
 
-    <form className="upload-form">
-      <label className="upload-label" htmlFor="video-title">
-        TITLE YOUR VIDEO
-      </label>
-      <textarea
-        id="video-title"
-        className="upload-textarea title-textarea"
-        name="name"
-        rows="10"
-        placeholder="Add a title to your video"
-      ></textarea>
 
-      <label className="upload-label" htmlFor="video-description">
-        ADD A VIDEO DESCRIPTION
-      </label>
-      <textarea
-        id="video-description"
-        className="upload-textarea description-textarea"
-        name="comment"
-        rows="10"
-        placeholder="Add a description of your video"
-      ></textarea>
-    </form>
-  </div>
+  useEffect(() => {
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+      )
+      .then((response) => {
+        setVideosList(response.data);
+      });
+  }, []);
 
-  <div className="upload-actions">
-    <button type="submit" className="upload-btn publish-btn">PUBLISH</button>
-    <button type="button" className="upload-btn cancel-btn">CANCEL</button>
-  </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Upload");
+    setUploadSuccess(true);
+};
 
-  <form className="extra-form" onSubmit={handleFormSubmit}>
-    {/* NEED 2 ADD INPUT FIELDS HERE */}
-    <button type="submit" className="upload-submit-btn">Upload</button>
-  </form>
-</section>
-  )
-  }
+
+
+return (
+  <>
+    {uploadSuccess ? (
+      <div className="upload__success-message">
+        <h3>Success!</h3>
+        <p>Your video has been uploaded successfully.</p>
+        <button onClick={() => navigate('/')}>
+          View Video
+        </button>
+      </div>
+    ) : (
+      <div className="upload">
+        <header className="upload__header">
+          <h1 className="upload__header-text">Upload Video</h1>
+        </header>
+
+        <main className="upload__main">
+          <section className="upload__thumbnail">
+            <h2>VIDEO THUMBNAIL</h2>
+            <img src={uploadImg} alt="Upload image thumbnail" />
+          </section>
+
+          <section className="upload__forms">
+            <div className="upload__forms-header">
+              <label htmlFor="title">TITLE YOUR VIDEO</label>
+              <input type="text" id="title" name="title" placeholder="Add a title to your video" />
+            </div>
+            <div className="upload__forms-text">
+              <label htmlFor="desc">ADD A VIDEO DESCRIPTION</label>
+              <textarea id="desc" name="desc" placeholder="Add a description to your video" />
+            </div>
+          </section>
+        </main>
+
+        <div className="button-container">
+           <button 
+            type="button" 
+            onClick={() => navigate('/')} 
+            className="upload__buttons-cancel"
+          >
+            CANCEL
+          </button>
+          <button 
+            type="button" 
+            onClick={handleSubmit} 
+            className="upload__buttons-publish"
+          >
+            <img 
+              src={uploadIcon} 
+              alt="Publish icon" 
+            />
+            PUBLISH
+          </button>
+        </div>
+      </div>
+    )}
+  </>
+);
+}
+
+  
+
+export default UploadPage;

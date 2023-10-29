@@ -1,7 +1,7 @@
 import './CommentForm.scss';
 import Comment from '../../assets/Icons/add_comment.svg';
 
-function CommentForm(props) {
+export default function CommentForm(props) {
 	return (
 		<form className="comments-form">
 			<div className="comments__avatar"></div>
@@ -27,4 +27,3 @@ function CommentForm(props) {
 	);
 }
 
-export default CommentForm;

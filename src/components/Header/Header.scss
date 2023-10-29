@@ -1,6 +1,10 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/global' as *;
 
+.link{
+	text-decoration: none;
+}
+
 .header {
 	background-color: white;
 	display: flex;
@@ -8,6 +12,8 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	border-bottom: 1px solid $mercury;
+
 
 	@media screen and (min-width: $mobile) {
 		padding: 0.5rem;
@@ -21,9 +27,10 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		padding-left: 10rem;
-		padding-right: 10rem;
 		justify-content: space-between;
+		justify-content: space-around;
+    padding-right: 0rem;
+    padding-left: 3rem;
 	}
 
 	&__form {
@@ -73,6 +80,8 @@
 		}
 
 		@media screen and (min-width: $desktop) {
+			width: 100%;
+			padding-left: 1rem;
 		}
 	}
 
@@ -137,6 +146,7 @@
 		color: white;
 		font-weight: 600;
 		display: flex;
+		
 
 		@media screen and (min-width: $mobile) and (max-width: 767px) {
 			justify-content: center;
@@ -153,13 +163,19 @@
 		}
 
 		@media screen and (min-width: $desktop) {
-			margin-left: 0.5rem;
-			padding-right: 0.5rem;
+			padding-right: 3rem;
+			padding-left: 1rem;
+			margin-left: 1rem;
 			width: 100%;
 			height: 1rem;
 			justify-content: center;
 			align-items: center;
 		}
+	}
+
+	&__button-text {
+		color: white;
+		font-weight: 600;
 	}
 
 	&__avatar {

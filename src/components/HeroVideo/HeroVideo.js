@@ -1,4 +1,4 @@
-// import './HeroVideo.scss';
+import './HeroVideo.scss';
 
 
 export default function HeroVideo({ video }) {
@@ -10,6 +10,7 @@ export default function HeroVideo({ video }) {
     </section>
   );
 }
+
 
 
 // function Video(props) {
@@ -26,4 +27,3 @@ export default function HeroVideo({ video }) {
 // 	);
 // }
 
-// export default Video;
