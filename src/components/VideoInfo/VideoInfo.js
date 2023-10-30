@@ -1,7 +1,6 @@
 import './VideoInfo.scss';
 import ViewIcon from '../../assets/Icons/views.svg';
 import LikeIcon from '../../assets/Icons/likes.svg';
-import Comments from '../Comments/Comments'
 
   const VideoInfo = ({ mainVideo }) => {
 

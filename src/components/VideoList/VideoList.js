@@ -1,7 +1,7 @@
 import './VideoList.scss';
 import SideVideo from "../SideVideo/SideVideo"
 
-function VideoList({ sideVideos, setMainVideo }) {  // Renamed prop for clarity
+function VideoList({ sideVideos, setMainVideo }) { 
   if (!sideVideos) {
     return <div>Loading...</div>;
   }
@@ -10,7 +10,7 @@ function VideoList({ sideVideos, setMainVideo }) {  // Renamed prop for clarity
     <div className="videoList">
       <h5 className="videoList__header">NEXT VIDEO</h5>
       {sideVideos.map((video) => (
-        <SideVideo key={video.id} video={video} />  // Simplified prop passing
+        <SideVideo key={video.id} video={video} />
       ))}
     </div>
   );
