@@ -17,7 +17,7 @@ function UploadPage() {
   useEffect(() => {
     axios
       .get(
-        "https://project-2-api.herokuapp.com/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+        "http://localhost:8080/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
       )
       .then((response) => {
         setVideosList(response.data);

@@ -23,7 +23,7 @@ export default function MainPage() {
   useEffect(() => {
     axios
       .get(
-        "https://project-2-api.herokuapp.com/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+        "http://localhost:8080/videos/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
       )
       .then((response) => {
         setSideVideos(response.data);
@@ -38,8 +38,8 @@ export default function MainPage() {
     axios
       .get(
         videoId
-          ? `https://project-2-api.herokuapp.com/videos/${videoId}/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec`
-          : "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
+          ? `http://localhost:8080/videos/${videoId}/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec`
+          : "http://localhost:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=e8ea54d0-3cd7-4281-8936-65a324902fec"
       )
       .then((response) => {
         setMainVideo(response.data);
