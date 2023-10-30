@@ -36,9 +36,9 @@ return (
   <>
     {uploadSuccess ? (
       <div className="upload__success-message">
-        <h3>Success!</h3>
+        <h3 className="upload__success-text">Success!</h3>
         <p>Your video has been uploaded successfully.</p>
-        <button onClick={() => navigate('/')}>
+        <button className="upload__success-button" onClick={() => navigate('/')}>
           View Video
         </button>
       </div>
