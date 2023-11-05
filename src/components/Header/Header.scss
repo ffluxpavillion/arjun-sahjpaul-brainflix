@@ -1,7 +1,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/global' as *;
 
-.link{
+.link {
 	text-decoration: none;
 }
 
@@ -13,7 +13,6 @@
 	justify-content: center;
 	position: relative;
 	border-bottom: 1px solid $mercury;
-
 
 	@media screen and (min-width: $mobile) {
 		padding: 0.5rem;
@@ -29,8 +28,8 @@
 	@media screen and (min-width: $desktop) {
 		justify-content: space-between;
 		justify-content: space-around;
-    padding-right: 0rem;
-    padding-left: 3rem;
+		padding-right: 0rem;
+		padding-left: 3rem;
 	}
 
 	&__form {
@@ -146,7 +145,6 @@
 		color: white;
 		font-weight: 600;
 		display: flex;
-		
 
 		@media screen and (min-width: $mobile) and (max-width: 767px) {
 			justify-content: center;

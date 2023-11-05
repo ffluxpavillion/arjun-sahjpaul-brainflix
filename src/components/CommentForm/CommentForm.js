@@ -14,8 +14,9 @@ export default function CommentForm(props) {
 				placeholder="Add a new comment"
 			></textarea>
 			<button
-				onClick={(event) => event.preventDefault()} 
-				className="comments__button">
+				onClick={(event) => event.preventDefault()}
+				className="comments__button"
+			>
 				<img
 					className="comments__add-comment"
 					src={Comment}
@@ -26,4 +27,3 @@ export default function CommentForm(props) {
 		</form>
 	);
 }
-

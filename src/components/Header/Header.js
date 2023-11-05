@@ -25,21 +25,16 @@ export default function Header(props) {
 				</div>
 				<div className="header__avatar small-screen"></div>
 				<div className="header__form-bottom">
-				<Link to="/upload" className="link" >
-					<button className="header__button" type="submit">
-						<Link to="/upload" className="link" >
+					<Link to="/upload" className="link">
+						<button className="header__button" type="submit">
 							<img
 								className="header__uploadIcon"
 								src={UploadIcon}
 								alt="Search Icon"
 							></img>
-						</Link>
-					<Link to="/upload" className="link" >
-						<div className="header__button-text">UPLOAD</div>
-						</Link>
-					</button>
+							<div className="header__button-text">UPLOAD</div>
+						</button>
 					</Link>
-
 					<div className="header__avatar large-screen"></div>
 				</div>
 			</form>
