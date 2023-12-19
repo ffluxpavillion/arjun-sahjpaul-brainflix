@@ -18,10 +18,14 @@ clone the backend https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
 
 cd in server folder
 
-VSCode/terminal: run `nodemon server` in server folder
+VSCode/terminal: run `npm i` / `npm install`
+
+VSCode/terminal: run `nodemon server`
 
 ### Client:
 cd in client folder
 
-VSCode/terminal: run `npm start` in client folder
+VSCode/terminal: run `npm i` / `npm install`
+
+VSCode/terminal: run `npm start`
 
