@@ -16,14 +16,14 @@ React.js, Express.js/Node.js backend, and SCSS for styling.
 ### Server:
 clone the backend https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
 
-cd in server folder
+cd into server folder
 
 VSCode/terminal: run `npm i` / `npm install`
 
 VSCode/terminal: run `nodemon server`
 
 ### Client:
-cd in client folder
+cd into client folder
 
 VSCode/terminal: run `npm i` / `npm install`
 
