@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# BrainFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Full-Stack responsive YouTube clone that supports the following components: Main Video, Sidebar Video Reel, and a Comments Section with updating POST functionality. It was developed to have a separate front and back end, completed in 3 sprints.  Sprint 1 & 2 can be found in this repository's branches. In Sprint 3, the goal was to build out and utilize our own API, instead of relying on mock data; you can find this sprint here: https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
 
-## Available Scripts
+Users can click through a set of videos, view their respective comment sections and POST new comments.  Users can also upload a new video which will then be displayed in the Sidebar Video Reel. Photos were used instead of videos as the primary focus of this project was to demonstrate proficiency in state management and establishing read route connections to the backend.
 
-In the project directory, you can run:
+## Tech Stack
+React.js, Express.js/Node.js backend, and SCSS for styling.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
+<img src = "https://user-images.githubusercontent.com/50502972/214372464-5b9a594a-a40a-419d-aa7a-6046e1b54b43.png">
 
-### `npm test`
+## To Run:
+### Server:
+clone the backend https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd in server folder
 
-### `npm run build`
+VSCode/terminal: run `nodemon server` in server folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Client:
+cd in client folder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+VSCode/terminal: run `npm start` in client folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
