@@ -1,12 +1,13 @@
 # BrainFlix
 
-A Full-Stack responsive YouTube clone that supports the following components: Main Video, Sidebar Video Reel, and a Comments Section with updating POST functionality. It was developed to have a separate front and back end, completed in 3 sprints.  Sprint 1 & 2 can be found in this repository's branches. In Sprint 3, the goal was to build out and utilize our own API, instead of relying on mock data; you can find this sprint here: https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
+Brainflix is a full-stack & responsive YouTube clone, and features key components of any online video player: Main Video, Sidebar Video Reel, Comments Section, and an Upload Page with updating POST functionality
 
-Users can click through a set of videos, view their respective comment sections and POST new comments.  Users can also upload a new video which will then be displayed in the Sidebar Video Reel. Photos were used instead of videos as the primary focus of this project was to demonstrate proficiency in state management and establishing read route connections to the backend.
+It was developed to have a separate front and back end, completed in 3 sprints.  Sprint 1 & 2 can be found in this repository's branches.  Users on mobile, tablet, or desktop devices can seamlessly navigate through videos and their respective comment sections.  Users can also upload a new video which will then be displayed in the Sidebar Video Reel. Photos were used instead of videos as the primary focus of this project was to demonstrate proficiency in state management and establishing read route connections to the backend.
+
+The primary goal for Sprint 3 was to build out and utilize our own API instead of relying on mock data, and this final leg of the project exists as its own repository titled: arjun-sahjpaul-brainflix-api. Check it out on my [GitHub Profile](https://github.com/ffluxpavillion?tab=repositories) or for a direct link [click here](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix).
 
 ## Tech Stack
 React.js, Express.js/Node.js backend, and SCSS for styling.
-
 
 
 ## Screenshots
