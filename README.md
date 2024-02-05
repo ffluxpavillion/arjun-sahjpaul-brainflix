@@ -4,7 +4,7 @@ Brainflix is a full-stack & responsive YouTube clone, and features key component
 
 It was developed to have a separate front and back end, completed in 3 sprints.  Sprint 1 & 2 can be found in this repository's branches.  Users on mobile, tablet, or desktop devices can seamlessly navigate through videos and their respective comment sections.  Users can also upload a new video which will then be displayed in the Sidebar Video Reel. Photos were used instead of videos as the primary focus of this project was to demonstrate proficiency in state management and establishing read route connections to the backend.
 
-The primary goal for Sprint 3 was to build out and utilize our own API instead of relying on mock data, and this final leg of the project exists as its own repository titled: arjun-sahjpaul-brainflix-api. Check it out on my [GitHub Profile](https://github.com/ffluxpavillion?tab=repositories) or for a direct link [click here](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix).
+The primary goal for Sprint 3 was to build out and utilize our own API instead of relying on mock data, and this final leg of the project exists as its own repository titled: [arjun-sahjpaul-brainflix-api](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api).
 
 ## Tech Stack
 React.js, Express.js/Node.js backend, and SCSS for styling.
