@@ -4,6 +4,9 @@ BrainFlix is an innovative video streaming platform prototype, designed to showc
 
 The platform aims to provide an intuitive experience for users, featuring a responsive design, dynamic video content, and interactive elements, all developed using the latest web technologies.
 
+Check out the BrainFlix API here: [arjun-sahjpaul-brainflix](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api)
+
+
 #### Problem Statement
 
 The market needs a contemporary video streaming platform that prioritizes user experience, offering intuitive navigation, immediate content updating, and easy content management.
@@ -54,16 +57,21 @@ Transition from a mock API to a custom-built API, refining the application’s f
 ## To Run:
 
 #### Server:
-VSCode/terminal: run `npm i` / `npm install` in server folder
+Clone/download the [BrainFlix API Server](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api)
 
-VSCode/terminal: run `nodemon server` in server folder
+VSCode/terminal: run `node server` in project folder
+
+Navigate to `http://localhost:8080/` in your browser
 
 #### Client:
-VSCode/terminal: run `npm i` / `npm install` in client folder
+VSCode/terminal: run `npm i` / `npm install` in project folder
 
-VSCode/terminal: run `npm start` in client folder
+VSCode/terminal: run `npm start` in project folder
+
+Navigate to `http://localhost:3000/` in your browser
 
 
 ## Screenshots
-<img src = "https://user-images.githubusercontent.com/50502972/214372464-5b9a594a-a40a-419d-aa7a-6046e1b54b43.png">
+<img src = "https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix/blob/Sprint-2/src/assets/screenshots/Brainflix_page-1.png?raw=true">
+<img src = "https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix/blob/Sprint-2/src/assets/screenshots/Brainflix_page-2.png?raw=true">
 
