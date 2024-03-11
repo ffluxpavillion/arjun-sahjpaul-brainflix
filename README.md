@@ -42,7 +42,7 @@ Enhance the prototype with additional functionality, integrating a mock API for 
 - Fetch video data dynamically from the provided mock API, updating the UI in real-time.
 - Implement the ability to post new comments and render them instantaneously, enhancing user engagement.
 
-### BrainFlix Sprint 3
+### [BrainFlix Sprint 3](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api)
 
 #### Objective
 
