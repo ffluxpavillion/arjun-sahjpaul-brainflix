@@ -1,32 +1,69 @@
-# BrainFlix
+# BrainFlix Project
 
-Brainflix is a full-stack & responsive YouTube clone, and features key components of any online video player: Main Video, Sidebar Video Reel, Comments Section, and an Upload Page with updating POST functionality
+BrainFlix is an innovative video streaming platform prototype, designed to showcase a modern, user-friendly interface for viewing and uploading video content. This project is structured in three sprints, each focusing on different aspects of the application, culminating in a fully functional front-end coupled with a custom-built API.
 
-It was developed to have a separate front and back end, completed in 3 sprints.  Sprint 1 & 2 can be found in this repository's branches.  Users on mobile, tablet, or desktop devices can seamlessly navigate through videos and their respective comment sections.  Users can also upload a new video which will then be displayed in the Sidebar Video Reel. Photos were used instead of videos as the primary focus of this project was to demonstrate proficiency in state management and establishing read route connections to the backend.
+The platform aims to provide an intuitive experience for users, featuring a responsive design, dynamic video content, and interactive elements, all developed using the latest web technologies.
 
-The primary goal for Sprint 3 was to build out and utilize our own API instead of relying on mock data, and this final leg of the project exists as its own repository titled: [arjun-sahjpaul-brainflix-api](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api).
+#### Problem Statement
 
-## Tech Stack
-React.js, Express.js/Node.js backend, and SCSS for styling.
+The market needs a contemporary video streaming platform that prioritizes user experience, offering intuitive navigation, immediate content updating, and easy content management.
+
+#### Solution
+
+BrainFlix addresses this need by delivering a sophisticated yet user-friendly interface, facilitating seamless video swapping, and content interaction, all backed by a robust, custom-built API that ensures a dynamic and engaging user experience.
+
+## Project Overview
+
+### BrainFlix Sprint 1
+
+#### Objective
+
+Create a responsive and functional app prototype based on provided designs, ensuring the foundation is set for future development and integration with a backend API.
+
+#### Key Deliverables
+
+- Develop dynamic components for real-time user interaction without hardcoding.
+- Implement a responsive layout that adheres to the provided design mockups.
+- Utilize React for building the application, ensuring modularity and reusability of components.
+- Employ SASS for styling, leveraging its capabilities for maintainable and scalable CSS.
+
+### BrainFlix Sprint 2
+
+#### Objective
+
+Enhance the prototype with additional functionality, integrating a mock API for dynamic data retrieval and introducing new pages for enriched user interaction.
+
+#### Key Enhancements
+
+- Introduce routing to enable navigation between the main video display and the video upload page.
+- Fetch video data dynamically from the provided mock API, updating the UI in real-time.
+- Implement the ability to post new comments and render them instantaneously, enhancing user engagement.
+
+### BrainFlix Sprint 3
+
+#### Objective
+
+Transition from a mock API to a custom-built API, refining the application’s functionality and ensuring all data interactions are fully operational and persistent.
+
+#### Final Touches
+
+- Develop a custom API to handle video data operations, ensuring seamless data flow and storage.
+- Enable video upload functionality, allowing users to add new content to the platform.
+- Ensure the application is robust, responsive, and mirrors the initial design specifications closely.
+
+## To Run:
+
+#### Server:
+VSCode/terminal: run `npm i` / `npm install` in server folder
+
+VSCode/terminal: run `nodemon server` in server folder
+
+#### Client:
+VSCode/terminal: run `npm i` / `npm install` in client folder
+
+VSCode/terminal: run `npm start` in client folder
 
 
 ## Screenshots
 <img src = "https://user-images.githubusercontent.com/50502972/214372464-5b9a594a-a40a-419d-aa7a-6046e1b54b43.png">
-
-## To Run:
-### Server:
-clone the backend https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api
-
-cd into server folder
-
-VSCode/terminal: run `npm i` / `npm install`
-
-VSCode/terminal: run `nodemon server`
-
-### Client:
-cd into client folder
-
-VSCode/terminal: run `npm i` / `npm install`
-
-VSCode/terminal: run `npm start`
 
