@@ -4,7 +4,7 @@ BrainFlix is an innovative video streaming platform prototype, designed to showc
 
 The platform aims to provide an intuitive experience for users, featuring a responsive design, dynamic video content, and interactive elements, all developed using the latest web technologies.
 
-Check out the BrainFlix API here: [arjun-sahjpaul-brainflix](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api).
+Check out the BrainFlix API here: [arjun-sahjpaul-brainflix-api](https://github.com/ffluxpavillion/arjun-sahjpaul-brainflix-api).
 
 
 #### Problem Statement
